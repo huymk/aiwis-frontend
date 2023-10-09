@@ -13,6 +13,9 @@ module.exports = {
         "navbar-end": " #E2F4FC",
         bgpurple: "#D5D6FF",
         bgcyan: "#CDF2FF",
+        gradientOrangeStart: "#EDDDD4",
+        gradientOrangeEnd: "#FFDDCB",
+        background: "#FBFBFD",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
