@@ -140,7 +140,7 @@ export default function Home() {
           </form>
         </div>
       </div>
-      <div className="h-screen bg-white">
+      <div className="h-screen bg-background">
         <div className="pt-80">
           <h1 className="font-bold text-center w-2/5 leading-tight text-4xl pb-5 mx-auto ">
             Consult Top Doctors Online For Any Health Concern
@@ -236,16 +236,16 @@ export default function Home() {
           </button>
         </div>
         <div className="mt-32 mx-auto w-full max-w-screen-xl grid grid-cols-7 grid-flow-col gap-x-32">
-          <div className="col-span-4">
+          <div className="col-span-3">
             <div className="bg-bgpurple w-full rounded-3xl object-fill">
               <img
                 alt="ngu"
                 className="w-full rounded-3xl object-content translate-x-10 -translate-y-10"
-                src="/doccallvideo.jpeg"
+                src="/squaredoc.jpeg"
               />
             </div>
           </div>
-          <div className="col-span-3 align-middle">
+          <div className="col-span-4 align-middle">
             <h1 className="font-bold text-4xl mt-7 ">Your Nearest Doctor</h1>
             <p className="w-96 mt-7">
               Select prefered doctors slot time to book in-clinic or video
@@ -267,13 +267,70 @@ export default function Home() {
               Take Appointment
             </button>
           </div>
-          <div className="col-span-4">
+          <div className="col-span-3">
             <div className="bg-bgcyan w-full rounded-3xl object-fill">
               <img
                 alt="ngu"
-                className="w-full rounded-3xl object-content -translate-x-10 -translate-y-10"
-                src="/doccallvideo.jpeg"
+                className="w-full rounded-3xl object-fill -translate-x-10 -translate-y-10"
+                src="/squaredoc.jpeg"
               />
+            </div>
+          </div>
+        </div>
+        <div className="mt-24 max-w-screen-xl mx-auto h -80 rounded-xl bg-gradient-to-r from-gradientOrangeStart to-gradientOrangeEnd">
+          <div className="mt-32 mx-auto w-full max-w-screen-xl grid grid-cols-2 grid-flow-col">
+            <div className="">
+              <div className="w-full rounded-3xl flex justify-end">
+                <img alt="ngu" className=" object-fill" src="/docmember.png" />
+              </div>
+            </div>
+            <div className="align-middle my-auto ">
+              <div className="w-40 mt-7 font-bold px-6 py-3 bg-white rounded-full bg-opacity-80">
+                Consulto Plus
+              </div>
+              <p className="w-full font-bold text-4xl mt-7 ">
+                Free Online Consultations
+              </p>
+              <p className="w-full font-bold text-4xl ">
+                Starting at $49/month
+              </p>
+              <button className="font-bold mt-7 px-6 py-3 text-white bg-primary-color rounded-full hover:opacity-50">
+                Get Memberships
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="mt-32 mx-auto w-full max-w-screen-xl grid grid-cols-7 grid-flow-col gap-x-32">
+          <div className="col-span-3">
+            <div className="bg-bgpurple w-full rounded-3xl object-fill">
+              <img
+                alt="ngu"
+                className="w-full rounded-3xl object-content translate-x-6 -translate-y-6"
+                src="/squaredoc.jpeg"
+              />
+            </div>
+          </div>
+          <div className="col-span-4 align-middle my-auto">
+            <h1 className="font-bold text-4xl w-96 ">
+              What Our Patient Say About Our Service
+            </h1>
+            <p className="w-96 mt-7">
+              "Very helpful. Easier than same thing on computer. Allow quick and
+              easy search with speed booking. Evain maintains history of doctors
+              visited."
+            </p>
+            <div className="mt-4 flex ">
+              <div className="object-cover">
+                <img
+                  alt="ngu"
+                  className="w-16 h-16  rounded-full shadow-lg"
+                  src="/14.jpg"
+                />
+              </div>
+              <div className="mx-4 my-auto">
+                <p className="font-bold">Guy Hawkins </p>
+                <p className="opacity-50 text-xs">President of Sales</p>
+              </div>
             </div>
           </div>
         </div>
