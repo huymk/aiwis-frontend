@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -9,25 +10,29 @@ export default function Navbar() {
             <div className="pr-4">
               <Image
                 alt="ngu"
-                className="rounded-full bg-white"
-                src="/logo.svg"
-                width={32}
-                height={18}
+                className="rounded-full bg-white p-2"
+                src="/logo2.svg"
+                width={48}
+                height={48}
               />
             </div>
 
             <div className=" font-bold">AIWIS</div>
           </div>
-          <div className=" text-base py-4 px-8 ">Home</div>
-          <div className=" text-base py-4 px-8">Find Doctors</div>
-          <div className=" text-base py-4 px-8">Find Medical</div>
-          <div className=" text-base py-4 px-8">Aiwis Prime</div>
-          <div className=" text-base py-4 px-8">Help</div>
+          <div className=" text-base py-4 px-8 font-bold">
+            <Link href="/">Trang chủ</Link>
+          </div>
+          <div className=" text-base py-4 px-8 font-bold">Tìm Bác Sĩ</div>
+          <div className=" text-base py-4 px-8 font-bold">Tìm Bệnh Viện</div>
+          <div className=" text-base py-4 px-8 font-bold">Aiwis Prime</div>
+          <div className=" text-base py-4 px-8 font-bold">CSKH</div>
         </div>
         <div className="flex">
-          <div className=" text-base py-4 px-8">Log in</div>
-          <button className="text-base rounded-full py-4 px-8 bg-primary-color text-white">
-            Sign in
+          <div className="text-base py-4 px-8 font-bold">
+            <Link href="/login">Đăng nhập</Link>
+          </div>
+          <button className="text-base rounded-full py-4 px-8 bg-primary-color text-white font-bold">
+            <Link href="/register">Đăng ký</Link>
           </button>
         </div>
       </div>
