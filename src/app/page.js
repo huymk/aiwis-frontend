@@ -282,7 +282,7 @@ export default async function Home() {
             </button>
           </div>
         </div>
-        <div className="mt-32 mx-auto w-full max-w-screen-xl grid grid-cols-7 grid-flow-col gap-x-32">
+        <div className="mt-32 mx-auto w-full max-w-screen-xl grid grid-cols-7 grid-flow-col gap-x-32 pb-8">
           <div className="col-span-4">
             <h1 className="font-bold text-5xl mt-7 ">Chăm sóc trực tuyến</h1>
             <p className="w-96 mt-7 text-lg">
@@ -329,18 +329,18 @@ export default async function Home() {
             </div>
           </div>
         </div>
-        <div className="mt-32 mx-auto w-full max-w-screen-xl grid grid-cols-7 grid-flow-col gap-x-32">
+        <div className="mt-32 mx-auto w-full max-w-screen-xl grid grid-cols-7 grid-flow-col gap-x-32 pb-8">
           <div className="col-span-3">
             <div className="bg-bgpurple w-full rounded-3xl object-fill">
               <img
                 alt="ngu"
                 className="w-full rounded-3xl object-content translate-x-6 -translate-y-6"
-                src="/squaredoc.jpeg"
+                src="/doclast.jpg"
               />
             </div>
           </div>
           <div className="col-span-4 align-middle my-auto">
-            <h1 className="font-bold text-4xl w-96 ">
+            <h1 className="font-bold text-4xl w-96">
               Những Bệnh nhân nói gì về dịch vụ của chúng tôi
             </h1>
             <p className="w-96 mt-7">

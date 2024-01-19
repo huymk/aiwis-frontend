@@ -6,19 +6,22 @@ export default function Navbar() {
     <div className="w-full bg-[#c0cfb2] ">
       <div className="max-w-screen-xl mx-auto flex items-center justify-between py-4">
         <div className="flex items-center">
-          <div className=" text-base py-4 pr-12 flex items-center">
-            <div className="pr-4">
-              <Image
-                alt="ngu"
-                className="rounded-full bg-white p-2"
-                src="/logo.svg"
-                width={48}
-                height={48}
-              />
-            </div>
+          <Link href="/">
+            <div className=" text-base py-4 pr-12 flex items-center">
+              <div className="pr-4">
+                <Image
+                  alt="ngu"
+                  className="rounded-full bg-white p-2"
+                  src="/logo.svg"
+                  width={48}
+                  height={48}
+                />
+              </div>
 
-            <div className=" font-bold">AIWIS</div>
-          </div>
+              <div className=" font-bold">AIWIS</div>
+            </div>
+          </Link>
+
           <div className=" text-base py-4 px-8 font-bold">
             <Link href="/">Trang chủ</Link>
           </div>
