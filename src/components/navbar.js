@@ -11,7 +11,7 @@ export default function Navbar() {
               <Image
                 alt="ngu"
                 className="rounded-full bg-white p-2"
-                src="/logo2.svg"
+                src="/logo.svg"
                 width={48}
                 height={48}
               />

@@ -1,17 +1,31 @@
+"use client";
+
 import Image from "next/image";
 import ListItem from "../components/listitem";
+import BlogPage from "../components/listblog";
+import ListDoctor from "../components/listdoctor";
 async function getMedicine() {
-  const response = await fetch(
-    `http://10.123.0.250:8080/api/v1/medicines/read-all`,
-    {
-      method: "GET",
-    }
-  );
+  const response = await fetch(process.env.HOST + `/medicines/read-all`, {
+    method: "GET",
+  });
+  return response.json();
+}
+async function getBlog() {
+  const response = await fetch(process.env.HOST + `/blogs/read-all`, {
+    method: "GET",
+  });
+  return response.json();
+}
+async function getDoctor() {
+  const response = await fetch(process.env.HOST + `/doctors/read-all`, {
+    method: "GET",
+  });
   return response.json();
 }
 export default async function Home() {
-  const data = await getMedicine();
-  console.log(data);
+  const medicine = await getMedicine();
+  const blog = await getBlog();
+  const doctor = await getDoctor();
   return (
     <div>
       <div className="w-full h-screen bg-[#c0cfb2] relative ">
@@ -155,12 +169,13 @@ export default async function Home() {
           <p className="mt-3 text-grey-100 text-center opacity-50">
             Tư vấn trực tuyến riêng tư với các chuyên gia từ nhiều lĩnh vực
           </p>
-          <div className="grid grid-cols-6 gap-8 max-w-screen-xl mx-auto  pt-10 group">
+          <ListDoctor data={doctor}></ListDoctor>
+          {/* <div className="grid grid-cols-6 gap-8 max-w-screen-xl mx-auto  pt-10 group">
             <div className="px-3 py-9 hover:shadow-xl group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 cursor-pointer rounded-xl bg-gray-100 bg-opacity-50 text-center">
               <Image
                 alt="ngu"
                 className="mx-auto rounded-full bg-white mb-4"
-                src="/logo.png"
+                src="/logo.svg"
                 width={48}
                 height={18}
               />
@@ -234,19 +249,20 @@ export default async function Home() {
                 Khám ngay
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="justify-center items-center flex my-10 ">
           <button className=" px-6 py-3 text-white font-bold bg-primary-color rounded-full hover:opacity-50">
-            Tất cả chuyên Khoa
+            Tất cả Chuyên khoa
           </button>
         </div>
         <div className="w-full bg-[#c0cfb2] py-10">
           <div className="mx-auto max-w-screen-xl font-bold rounded-xl px-2 py-1 mb-4 text-4xl">
             🔥Sản phẩm bán chạy
           </div>
-          <ListItem data={data}></ListItem>
+          <ListItem data={medicine}></ListItem>
         </div>
+
         <div className="mt-32 mx-auto w-full max-w-screen-xl grid grid-cols-7 gap-x-32">
           <div className="col-span-3">
             <div className="bg-bgpurple w-full rounded-3xl object-fill">
@@ -288,6 +304,9 @@ export default async function Home() {
               />
             </div>
           </div>
+        </div>
+        <div className="w-full bg-[#c0cfb2] py-10">
+          <BlogPage blogList={blog}></BlogPage>
         </div>
         <div className="mt-24 max-w-screen-xl mx-auto h -80 rounded-xl bg-gradient-to-r from-gradientOrangeStart to-gradientOrangeEnd">
           <div className="mt-32 mx-auto w-full max-w-screen-xl grid grid-cols-2 grid-flow-col">

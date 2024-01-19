@@ -15,7 +15,7 @@ export default async function ListItem(data) {
             <div className="w-full">
               <img
                 className="rounded-lg bg-white mb-2 h-32 w-full"
-                src={medicine.url}
+                src={medicine.image_url}
               ></img>
               <div className="text-justify font-bold">{medicine.name}</div>
             </div>
