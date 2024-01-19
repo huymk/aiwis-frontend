@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import ListItem from "../components/listitem";
 import BlogPage from "../components/listblog";
@@ -36,7 +34,7 @@ export default async function Home() {
           Được các Bác sĩ tư vấn miễn phí!
         </h1>
         <p className="text-center leading-7 pb-7">
-          24/7 Video Call trò chuyện với Bác sĩ. Được bảo mật an toàn.
+          24/7 Trò chuyện trực tuyến với Bác sĩ. Được bảo mật an toàn.
         </p>
 
         <div>
@@ -166,7 +164,7 @@ export default async function Home() {
           <h1 className="font-bold text-center w-2/5 leading-tight text-4xl pb-5 mx-auto ">
             Tham khảo ý kiến ​​trực tuyến của các bác sĩ hàng đầu
           </h1>
-          <p className="mt-3 text-grey-100 text-center opacity-50">
+          <p className="my-5 text-grey-100 text-center opacity-50">
             Tư vấn trực tuyến riêng tư với các chuyên gia từ nhiều lĩnh vực
           </p>
           <ListDoctor data={doctor}></ListDoctor>
