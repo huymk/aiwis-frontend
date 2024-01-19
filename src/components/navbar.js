@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className="w-full bg-gradient-to-r from-navbar-start to-navbar-end ">
+    <div className="w-full bg-[#c0cfb2] ">
       <div className="max-w-screen-xl mx-auto flex items-center justify-between py-4">
         <div className="flex items-center">
           <div className=" text-base py-4 pr-12 flex items-center">

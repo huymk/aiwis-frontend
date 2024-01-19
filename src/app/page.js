@@ -1,9 +1,12 @@
 import Image from "next/image";
 import ListItem from "../components/listitem";
 async function getMedicine() {
-  const response = await fetch(`http://localhost:3000/api/medicines`, {
-    method: "GET",
-  });
+  const response = await fetch(
+    `http://10.123.0.250:8080/api/v1/medicines/read-all`,
+    {
+      method: "GET",
+    }
+  );
   return response.json();
 }
 export default async function Home() {
@@ -11,15 +14,15 @@ export default async function Home() {
   console.log(data);
   return (
     <div>
-      <div className="w-full h-screen bg-gradient-to-r from-navbar-start to-navbar-end relative ">
+      <div className="w-full h-screen bg-[#c0cfb2] relative ">
         <h2 className="font-bold text-center leading-tight text-3xl py-5">
           Giải đáp mọi mối lo ngại
         </h2>
         <h1 className="font-bold text-center leading-tight text-6xl pb-5">
-          Được các Bác Sĩ tư vấn miễn phí!
+          Được các Bác sĩ tư vấn miễn phí!
         </h1>
         <p className="text-center leading-7 pb-7">
-          24/7 Video Call trò chuyện với Bác Sĩ. Được bảo mật an toàn.
+          24/7 Video Call trò chuyện với Bác sĩ. Được bảo mật an toàn.
         </p>
 
         <div>
@@ -76,7 +79,7 @@ export default async function Home() {
                 <p className="font-bold pb-6">Có phải bạn đang cần: </p>
                 <div className="grid grid-cols-4 gap-3">
                   <div className="bg-white rounded-xl p-3 shadow-md">
-                    <h1 className="font-bold text-xl">Bác Sĩ</h1>
+                    <h1 className="font-bold text-xl">Bác sĩ</h1>
                     <p className="text-sm">Đặt lịch khám</p>
                   </div>
                   <div className="bg-white rounded-xl p-3 shadow-md">
@@ -161,7 +164,7 @@ export default async function Home() {
                 width={48}
                 height={18}
               />
-              <p className="font-bold">Trẻ Em</p>
+              <p className="font-bold">Khoa Nhi</p>
               <button className="mt-3 px-2 py-1 rounded-full bg-primary-color font-bold bg-opacity-80 text-white">
                 Khám ngay
               </button>
@@ -174,7 +177,7 @@ export default async function Home() {
                 width={48}
                 height={18}
               />
-              <p className="font-bold">Dạ dày</p>
+              <p className="font-bold">Khoa Nội</p>
               <button className="mt-3 px-2 py-1 rounded-full bg-primary-color font-bold bg-opacity-80 text-white">
                 Khám ngay
               </button>
@@ -187,7 +190,7 @@ export default async function Home() {
                 width={48}
                 height={18}
               />
-              <p className="font-bold">Khoa Tâm Thần</p>
+              <p className="font-bold">Khoa Thần Kinh</p>
               <button className="mt-3 px-2 py-1 rounded-full bg-primary-color font-bold bg-opacity-80 text-white">
                 Khám ngay
               </button>
@@ -226,7 +229,7 @@ export default async function Home() {
                 width={48}
                 height={18}
               />
-              <p className="font-bold">Bệnh truyền nhiễm</p>
+              <p className="font-bold">Khoa Truyền Nhiễm</p>
               <button className="mt-3 px-2 py-1 rounded-full bg-primary-color font-bold bg-opacity-80 text-white">
                 Khám ngay
               </button>
@@ -238,9 +241,9 @@ export default async function Home() {
             Tất cả chuyên Khoa
           </button>
         </div>
-        <div className="w-full bg-gradient-to-r from-navbar-start to-navbar-end py-10">
-          <div className="mx-auto text-center text-white font-bold bg-gradient-to-b from-[#9fd6f9] to-[#1097da] w-52 rounded-xl px-2 py-1 mb-4">
-            Sản phẩm bán chạy
+        <div className="w-full bg-[#c0cfb2] py-10">
+          <div className="mx-auto max-w-screen-xl font-bold rounded-xl px-2 py-1 mb-4 text-4xl">
+            🔥Sản phẩm bán chạy
           </div>
           <ListItem data={data}></ListItem>
         </div>
@@ -255,13 +258,13 @@ export default async function Home() {
             </div>
           </div>
           <div className="col-span-4 col-start-5 align-middle">
-            <h1 className="font-bold text-5xl mt-7 ">Bác Sĩ gần nhất</h1>
+            <h1 className="font-bold text-5xl mt-7 ">Bác sĩ gần nhất</h1>
             <p className="w-96 mt-7 text-lg">
-              Chọn Bác Sĩ mong muốn ở gần bạn để đặt lịch khám, khám bệnh online
+              Chọn Bác sĩ mong muốn ở gần bạn để đặt lịch khám, khám bệnh online
               bằng Video. Rất dễ dàng và tiện lợi.
             </p>
             <button className="font-bold mt-7 px-6 py-3 text-white bg-primary-color rounded-full hover:opacity-50">
-              Tìm Bác Sĩ Ngay Bây Giờ
+              Tìm Bác sĩ Ngay Bây Giờ
             </button>
           </div>
         </div>
@@ -269,7 +272,7 @@ export default async function Home() {
           <div className="col-span-4">
             <h1 className="font-bold text-5xl mt-7 ">Chăm sóc trực tuyến</h1>
             <p className="w-96 mt-7 text-lg">
-              Hãy cho chúng tôi biết về sức khỏe của bạn và Bác Sĩ sẽ trả lời
+              Hãy cho chúng tôi biết về sức khỏe của bạn và Bác sĩ sẽ trả lời
               chỉ trong 60s.
             </p>
             <button className="font-bold mt-7 px-6 py-3 text-white bg-primary-color rounded-full hover:opacity-50">

@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 async function getMedicine() {
-  const response = await fetch(`http://localhost:3000/api/medicines`, {
+  const response = await fetch(``, {
     method: "GET",
   });
   return response.json();
@@ -25,11 +25,7 @@ export default async function ListItem(data) {
                 style: "currency",
                 currency: "VND",
               })}{" "}
-              / Hộp
-            </div>
-
-            <div className="text-left font-extrabold text-xs text-red-500">
-              Số lượng: {medicine.stock}
+              / {medicine.unit}
             </div>
           </div>
         );
